@@ -27,6 +27,10 @@ class SignUpViewController : UIViewController , UITextFieldDelegate {
     
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
+        configuration()
+    }
+    
+    func configuration(){
         CommonUtils.commonLayout(viewName: userView)
         CommonUtils.commonLayout(viewName: emailView)
         CommonUtils.commonLayout(viewName: passwordView)
@@ -42,6 +46,9 @@ class SignUpViewController : UIViewController , UITextFieldDelegate {
         confirmPasswordField.delegate = self;
         
         navigationItem.hidesBackButton = true
+        
+        passwordField.isSecureTextEntry = true
+        confirmPasswordField.isSecureTextEntry=true
         
     }
     

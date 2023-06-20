@@ -19,15 +19,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailStackView: UIStackView!
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var passwordStack: UIStackView!
-
+    
     // right or wrong icon for input field
     @IBOutlet weak var validEmail: UIImageView!
     @IBOutlet weak var validPassword: UIImageView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        configuration()
+    }
+    
+    func configuration(){
         CommonUtils.commonLayout(viewName: emailFieldView );
         CommonUtils.commonLayout(viewName: passwordView );
         validEmail.isHidden=true;
@@ -36,8 +40,8 @@ class ViewController: UIViewController {
         // Set delegate for emailField and passwordField
         emailField.delegate = self
         passwordField.delegate = self
+        passwordField.isSecureTextEntry = true
     }
-    
     
     @IBAction func loginButton(_ sender: UIButton) {
         LoginUtils.loginHandler(emailField: emailField, passwordField: passwordField,viewController: self);
@@ -50,4 +54,4 @@ class ViewController: UIViewController {
     }
     
 }
-   
+

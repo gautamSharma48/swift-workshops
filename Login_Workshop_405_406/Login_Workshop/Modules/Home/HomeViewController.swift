@@ -26,14 +26,12 @@ class HomeViewController : UIViewController , UITableViewDataSource {
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
         super.viewDidLoad();
-        navigationController?.navigationBar.barTintColor = UIColor.red
-        
-         
+
          // Set the navigation title
          self.title = "Dashboard"
-         
-         // Show the navigation bar
+        // Show the navigation bar
          navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.navigationBar.barTintColor = UIColor.red
          
         table.dataSource = self
     }
