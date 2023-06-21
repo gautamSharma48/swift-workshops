@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 struct Photo : Decodable{
     var albumId: Int
     var id: Int
@@ -14,7 +15,6 @@ struct Photo : Decodable{
     var url: String
     var thumbnailUrl: String
 }
-
 
 class ViewController: UIViewController , UICollectionViewDataSource{
     
