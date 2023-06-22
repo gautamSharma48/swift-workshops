@@ -13,8 +13,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bPW-On-EQA" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="525-2D-R1k">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="525-2D-R1k">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -530,7 +530,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="aJ9-y0-P0e" firstAttribute="leading" secondItem="odd-BV-KkX" secondAttribute="leading" id="aek-Wc-BuP"/>
-                            <constraint firstItem="aJ9-y0-P0e" firstAttribute="top" secondItem="Vvi-R8-n0K" secondAttribute="top" constant="94" id="qgL-kC-PXx"/>
+                            <constraint firstItem="aJ9-y0-P0e" firstAttribute="top" secondItem="odd-BV-KkX" secondAttribute="top" constant="35" id="q8g-J3-Iyy"/>
                             <constraint firstItem="odd-BV-KkX" firstAttribute="bottom" secondItem="aJ9-y0-P0e" secondAttribute="bottom" id="ryU-dl-Yn7"/>
                             <constraint firstItem="odd-BV-KkX" firstAttribute="trailing" secondItem="aJ9-y0-P0e" secondAttribute="trailing" id="tO8-n3-4iL"/>
                         </constraints>
