@@ -15,30 +15,22 @@ class SignUpUtils {
         
         guard let user = userField.text ,let email = emailField.text,
               let password = paswordField.text , let confirmPassword = confirmPasswordField.text  else {
-            viewController.openAlert(title: "Alert", message: "Please add details.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
-                print("Okay clicked!")
-            }])
+            viewController.openAlert(title: "Alert", message: "Please add details.")
             return
-              }
+        }
         
         if user.isEmpty || email.isEmpty || password.isEmpty || confirmPassword.isEmpty {
-            viewController.openAlert(title: "Alert", message: "Please add details.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
-                print("Okay clicked!")
-            }])
+            viewController.openAlert(title: "Alert", message: "Please add details.")
             return
         }
         
         if !email.validateEmail() {
-            viewController.openAlert(title: "Alert", message: "Please enter a valid email.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
-                print("Okay clicked!")
-            }])
+            viewController.openAlert(title: "Alert", message: "Please enter valid email.")
             return
         }
         
         if !password.validatePassword() || !confirmPassword.validatePassword() {
-            viewController.openAlert(title: "Alert", message: "Please enter a valid password.", alertStyle: .alert, actionTitles: ["Okay"], actionStyles: [.default], actions: [{ _ in
-                print("Okay clicked!")
-            }])
+            viewController.openAlert(title: "Alert", message: "Please enter valid password")
             return
         }
         

@@ -14,6 +14,7 @@ class HomeViewController : UIViewController , UITableViewDataSource {
     
     //UITableViewDataSource- ensure that this class provide the data sorce for the table cell
     @IBOutlet weak var table: UITableView!; //ib stands for interface builder
+    
     struct OrderSummary{
         let orderNo : String
         let orderName : String;
@@ -32,7 +33,7 @@ class HomeViewController : UIViewController , UITableViewDataSource {
         self.title = "Dashboard"
         // Show the navigation bar
         navigationController?.setNavigationBarHidden(false, animated: true)
-        navigationController?.navigationBar.backgroundColor = UIColor.red
+        //navigationController?.navigationBar.backgroundColor = UIColor.red
         navigationController?.navigationBar.barTintColor = UIColor.red
         let searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: nil);
         navigationItem.rightBarButtonItem = searchButton

@@ -58,18 +58,25 @@ class RegisterViewController: UIViewController {
         //save data on user defaults
         DatabaseManager.setUser(userDetail)
         //save password on key chain
-         let encPassword = try!  password.aesEncrypt(key: Constants.key , iv: Constants.initializationVector)
-        print(encPassword)
-        guard let data = encPassword.data(using: .utf8) else {
-            return
+        do{
+            let encPassword = try password.aesEncrypt(key: Constants.key , iv: Constants.initializationVector)
+            guard let data = encPassword.data(using: .utf8) else {
+                return
+            }
+            let status: Bool = DatabaseManager.setKeyChain(data, forKey:"loginCred")
+            
+            if status {
+                openAlert(title: "Registeration", message: "Data saved ")
+            }
+            else{
+                openAlert(title: "Registeration", message: "key chain not saved ")
+            }
         }
-        let status: Bool = DatabaseManager.setKeyChain(data, forKey:"loginCred")
-        if status {
-            openAlert(title: "Registeration", message: "Data saved ")
+        catch{
+            print("error \(error)")
         }
-        else{
-            openAlert(title: "Registeration", message: "key chain not saved ")
-        }
+       
+        
         
         
     }
