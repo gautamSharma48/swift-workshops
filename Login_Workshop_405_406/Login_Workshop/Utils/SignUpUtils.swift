@@ -29,7 +29,7 @@ class SignUpUtils {
             return
         }
         
-        if !password.validatePassword() || !confirmPassword.validatePassword() {
+        if !password.validatePassword() || !confirmPassword.validatePassword() || password != confirmPassword {
             viewController.openAlert(title: "Alert", message: "Please enter valid password")
             return
         }
@@ -51,7 +51,7 @@ extension SignUpViewController{
         }
         return true
     }
-    
+    //use generic function
     func validateEmail(textField: UITextField, range: NSRange, string: String) {
         let updatedText = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) ?? ""
         if updatedText.isEmpty {

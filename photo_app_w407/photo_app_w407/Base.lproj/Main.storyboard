@@ -34,7 +34,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="188" height="224"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d7p-6g-iNM" customClass="CustomImageView" customModule="photo_app_w407" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d7p-6g-iNM">
                                                     <rect key="frame" x="0.0" y="0.0" width="188" height="224"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="224" id="X3O-iJ-PoI"/>

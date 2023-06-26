@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class CustomImageView : UIImageView {
+extension UIImageView {
     
     //load image using SDWebImage Package -
     
