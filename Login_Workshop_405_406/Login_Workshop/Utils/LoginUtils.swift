@@ -38,7 +38,7 @@ class LoginUtils  {
         // Navigation - Home Screen
         if let VC = viewController.storyboard?.instantiateViewController(identifier : "HomeViewController") as? HomeViewController {
             viewController.navigationController?.pushViewController(VC, animated: true);
-        }
+        }    
     }
     
 }

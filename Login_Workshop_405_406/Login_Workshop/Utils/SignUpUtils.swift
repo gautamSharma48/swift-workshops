@@ -33,7 +33,7 @@ class SignUpUtils {
             viewController.openAlert(title: "Alert", message: "Please enter valid password")
             return
         }
-        
+         
         //navigate to home screen
         if let VC = viewController.storyboard?.instantiateViewController(identifier : "HomeViewController") as? HomeViewController {
             viewController.navigationController?.pushViewController(VC, animated: true);
